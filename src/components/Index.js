@@ -12,18 +12,36 @@ const {year, ...birthday} = {
   month: 0,
   day: 6
 };
-const now = moment();
 
 @radium
 class Index extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      now: moment()
+    };
+  }
+
+  componentDidMount() {
+    this.interval = setInterval(() => {
+      this.setState({now: moment()});
+    }, 1000 / 24);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
   render() {
+    const {now} = this.state;
+
     return (
       <div>
-        {
+        {(
           (now.year() - year) +
           (moment().format('x') - moment(birthday).format('x')) /
           (moment(birthday).add(1, 'y') - moment(birthday).format('x'))
-        } years old
+        ).toFixed(12)} years old
       </div>
     );
   }
