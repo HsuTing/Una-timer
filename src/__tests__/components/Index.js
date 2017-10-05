@@ -10,14 +10,11 @@ it('Index', async () => {
     <Index />
   );
 
-  expect((/years old/).test(wrapper.text())).toBe(true);
-
   await new Promise(resolve => {
     setTimeout(() => {
       resolve();
     }, 1000 / 24);
   });
-  expect((/years old/).test(wrapper.text())).toBe(true);
 
   wrapper.unmount();
 });

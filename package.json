@@ -39,12 +39,14 @@
   "dependencies": {
     "cat-components": "^1.8.6",
     "cross-env": "^5.0.5",
+    "js-cookie": "^2.1.4",
     "moment": "^2.18.1",
     "prop-types": "^15.6.0",
     "radium": "^0.19.4",
     "radium-normalize": "^2.0.5",
     "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react-dom": "^16.0.0",
+    "validator": "^9.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
