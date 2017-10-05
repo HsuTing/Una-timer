@@ -46,7 +46,7 @@ class Index extends React.Component {
           cookie.get('birthday') ?
             <Time time={this.getYearsOld()}
               title='YEARS OLD'
-              subTitle='1992.12.11'
+              subTitle={moment(cookie.getJSON('birthday')).format('YYYY.MM.DD')}
               style={{
                 color: 'rgb(239, 71, 111)',
                 background: white
