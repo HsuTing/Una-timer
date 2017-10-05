@@ -107,25 +107,30 @@ class Index extends React.Component {
     const diff = monthEnd.format('x') - now.format('x');
     const diffTime = moment.duration(diff);
 
-    return diffTime.asDays().toFixed(9);
+
+    return (diffTime.asDays() / monthEnd.date() * 100).toFixed(9);
   }
 
   getSeasonEnd() {
     const {now} = this.state;
+    const seasonStart = moment().startOf('quarter');
     const seasonEnd = moment().endOf('quarter');
-    const diff = seasonEnd.format('x') - now.format('x');
-    const diffTime = moment.duration(diff);
 
-    return diffTime.asMonths().toFixed(9);
+    return (
+      (seasonEnd.format('x') - now.format('x')) /
+      (seasonEnd.format('x') - seasonStart.format('x')) * 100
+    ).toFixed(9);
   }
 
   getYearEnd() {
     const {now} = this.state;
+    const yearStart = moment().startOf('year');
     const yearEnd = moment().endOf('year');
-    const diff = yearEnd.format('x') - now.format('x');
-    const diffTime = moment.duration(diff);
 
-    return diffTime.asDays().toFixed(9);
+    return (
+      (yearEnd.format('x') - now.format('x')) /
+      (yearEnd.format('x') - yearStart.format('x')) * 100
+    ).toFixed(9);
   }
 }
 
