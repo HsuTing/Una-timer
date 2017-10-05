@@ -18,5 +18,5 @@ yarn install && yarn build
 ## License
 MIT © [HsuTing](http://hsuting.com)
 
-[travis-image]: https://travis-ci.org/HsuTing/una-timer.svg?branch=master
-[travis-url]: https://travis-ci.org/HsuTing/una-timer
+[travis-image]: https://travis-ci.org/HsuTing/Una-timer.svg?branch=master
+[travis-url]: https://travis-ci.org/HsuTing/Una-timer

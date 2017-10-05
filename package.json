@@ -12,7 +12,7 @@
     "prod": "yarn babel && cross-env NODE_ENV=production static static.config.js && yarn webpack",
     "watch": "concurrently -c green \"yarn lint:watch\" \"yarn babel:watch\" \"yarn webpack-server\""
   },
-  "name": "una-timer",
+  "name": "Una-timer",
   "version": "0.1.0",
   "description": "Una timer",
   "author": {
@@ -27,13 +27,13 @@
   "pre-commit": [
     "lint"
   ],
-  "homepage": "https://github.com/HsuTing/una-timer/",
+  "homepage": "https://github.com/HsuTing/Una-timer/",
   "repository": {
     "type": "git",
-    "url": "get+https://github.com/HsuTing/una-timer.git"
+    "url": "get+https://github.com/HsuTing/Una-timer.git"
   },
   "bugs": {
-    "url": "https://github.com/HsuTing/una-timer/issues/"
+    "url": "https://github.com/HsuTing/Una-timer/issues/"
   },
   "license": "MIT",
   "dependencies": {
