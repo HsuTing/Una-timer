@@ -1384,6 +1384,10 @@ cat-components@^1.8.6:
     prop-types "^15.5.10"
     radium "^0.19.4"
 
+"cat-jest@https://github.com/HsuTing/cat-jest.git":
+  version "1.0.0"
+  resolved "https://github.com/HsuTing/cat-jest.git#2875a19704cdd53bf48f5870dd79c698b13c59e7"
+
 center-align@^0.1.1:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/center-align/-/center-align-0.1.3.tgz#aa0d32629b6ee972200411cbd4461c907bc2b7ad"

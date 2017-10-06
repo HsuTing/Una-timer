@@ -23,7 +23,6 @@ export default class AddBirthday extends React.Component {
     };
 
     this.key = '';
-    this.onKeyDown = this.onKeyDown.bind(this);
     this.onChange = this.onChange.bind(this);
     this.join = this.join.bind(this);
   }
@@ -69,26 +68,14 @@ export default class AddBirthday extends React.Component {
     );
   }
 
-  onKeyDown(e) {
-    this.key = e.key;
-  }
-
   onChange({value, isError, error}) {
-    let newValue = value;
-
-    if(this.key === 'Backspace') {
-      if(value[value.length - 1] === '／')
-        newValue = value.slice(0, value.length - 1);
-    } else {
-      const tempValue = value.replace(/／/g, '');
-
-      newValue = ([
-        tempValue.slice(0, 4),
-        tempValue.slice(4, 6),
-        tempValue.slice(6, 8)
-      ]).filter(time => time !== '')
-        .join('／');
-    }
+    const tempValue = value.replace(/／/g, '');
+    const newValue = ([
+      tempValue.slice(0, 4),
+      tempValue.slice(4, 6),
+      tempValue.slice(6, 8)
+    ]).filter(time => time !== '')
+      .join('／');
 
     this.setState({
       value: newValue,
@@ -107,8 +94,8 @@ export default class AddBirthday extends React.Component {
 
     cookie.set('birthday', {
       year: parseInt(year),
-      month: month ? parseInt(month) - 1 : 0,
-      date: date ? parseInt(date) : 1
-    });
+      month: parseInt(month) - 1,
+      date: parseInt(date)
+    }, {expires: 7 * 365});
   }
 }

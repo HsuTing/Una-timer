@@ -38,6 +38,7 @@
   "license": "MIT",
   "dependencies": {
     "cat-components": "^1.8.6",
+    "cat-jest": "https://github.com/HsuTing/cat-jest.git",
     "cross-env": "^5.0.5",
     "js-cookie": "^2.1.4",
     "moment": "^2.18.1",
